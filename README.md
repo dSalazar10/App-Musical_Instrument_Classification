@@ -76,6 +76,18 @@ printed case.
 <a name="software"></a>
 ## Software
 
+* The main program, main.py, connects to the USB mic and prompts the user
+to press the button to start recording. 
+* When the button is pressed, an audio stream is opened up and the user is
+prompted to press the button to stop recording.
+* The program will record audio samples into a buffer until the button is pressed.
+* After the button is pressed a second time, the file is:
+  - filtered
+  - processed
+  - converted to a .wav file
+  - passed into the Support Vector Machine model
+* The resulting instruments are displayed on the LCD screen.
+
 <a name="built"></a>
 ## Built With
 * [Adafruit Char LCD](https://github.com/adafruit/Adafruit_Python_CharLCD/blob/master/Adafruit_CharLCD/Adafruit_CharLCD.py) - 
