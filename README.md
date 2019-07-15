@@ -3,6 +3,7 @@
 
 # Embedded Machine Learning
 ![](./images/Music_Box_outside.png)
+
 The Music Box is stand-alone platform built around the Beaglebone Black
 to record live music and classify the instrument that is playing in real-time.
 The software is able to receive input with an integrated button, record
