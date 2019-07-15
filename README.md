@@ -3,13 +3,11 @@
 
 # Embedded Machine Learning
 
-One Paragraph of project description goes here
-
 The Music Box is the embedded version of a musical instrument
-classification model running in real-time. The software is able to
-receive input with an integrated button, record audio clips using
-an integrated mic, and display the resulting classification in seconds
-with an integrated LCD screen. This is all housed neatly in a 3D
+classification model running on an embedded microprocessor in real-time.
+The software is able to receive input with an integrated button, record
+audio clips using an integrated mic, and display the resulting classification
+in seconds with an integrated LCD screen. This is all housed neatly in a 3D
 printed case.
 
 ## Table of Contents
