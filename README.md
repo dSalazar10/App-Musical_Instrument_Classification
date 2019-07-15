@@ -1,65 +1,87 @@
-
-# Musical_Instrument_Classification
-Musical Instrument Classification Project Using Beaglebone Black (CSUEB CMPE 344 Class)
-
-* Download and install Debian 9.5 2018-10-07 4GB SD LXQT OS image from https://beagleboard.org/latest-images and move it to a MicroSD card (16 GB minimum recommended size). *
-
-* Follow instructions on http://www.ofitselfso.com/BeagleNotes/Disabling_The_EMMC_Memory_On_The_Beaglebone_Black.php to disable booting from the Beaglebone's EMMC and force booting from the MicroSD card by default. *
-
-* To extend filesystem on MicroSD card: 
-1. cd /opt/scripts/tools
-2. ./grow_partition.sh
-*
+![](./images/LOGO.png)
 
 
-* Instructions to install required software on Beaglebone Black to Conda virtual environment: 
-1. Follow instructions at https://jamwheeler.com/college-productivity/using-a-raspberry-pi-for-instrumentation-software-part-3/
-   to setup and install:
-   - Miniconda3
-   - Add rpi channel to conda
-   - Create & activate a python 3.6 conda environment
-     * conda create -n py36 python=3.6
-     * source activate py36
+# Embedded Machine Learning
 
-2. conda install -c rpi scipy 
+One Paragraph of project description goes here
 
-3. conda install -c rpi scikit-learn 
+The Music Box is the embedded version of a musical instrument
+classification model running in real-time. The software is able to
+receive input with an integrated button, record audio clips using
+an integrated mic, and display the resulting classification in seconds
+with an integrated LCD screen. This is all housed neatly in a 3D
+printed case.
 
-4. conda install --channel=numba llvmlite
+## Table of Contents
+* [Hardware](#hardware)
+  - [Post Wiring](#finished)
+* [Software](#software)
+* [Built With](#built)
+* [Authors](#authors)
 
-5. conda install -c rpi openblas 
+<a name="hardware"></a>
+## Hardware
+* The Beagle Bone Black (BBB) was utilized as this projects embedded platform.
 
-6. pip install numpy
+![](./images/BBB.jpg)
 
-7. pip install librosa==0.6.2
+* A tactile button was integrated for user input.
 
-8. pip install pyaudio
+![](./images/Button.jpg)
 
-9. pip install Adafruit_BBIO
+* A microphone was integrated for audio input.
 
-10. pip install Adafruit-CharLCD
-*
+![](./images/Mic.jpg)
 
+* A 1602A LCD screen was integrated for user output.
 
-* Process for Developing Machine Learning Model:
-Stage 1 – Preprocessing
-1. Convert files from .mp3 to .wav
+![](./images/LCD.png)
 
-Stage 2 – Feature Extraction
-1. Remove leading and trailing silence
-2. Extract MFCC values and append instrument label 
-3. Save all data to .csv file
+* A 3D Printed case was made to house the components
 
-Stage 3 – Training (Scikit-Learn SVM)
-1. C-Support Vector Classification
-   1. C = 50
-   2. kernel = 'rbf'
-   3. gamma = 0.001
-   4. decision_function_shape = 'ovr'
+![](./images/Case.jpg)
 
-Stage 4 – Testing
-1. 75/25 train-test split to prevent overfitting and determine model statistics (accuracy, precision, recall, and F1)
+<a name="finished"></a>
+### Post Wiring 
 
-Stage 5 – Model Persistence
-1. Serialize SVM model with pickle and deserialize when needed for consistent instrument classifications
-*
+* This is the result of soldering all the components to the BBB
+  - Inside:
+  - ![](./images/Music_Box_inside.jpg)
+  - Outside:
+  - ![](./images/Music_Box_outside.png)
+
+<a name="software"></a>
+## Software
+
+<a name="built"></a>
+## Built With
+
+* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [Maven](https://maven.apache.org/) - Dependency Management
+* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+
+<a name="authors"></a>
+## Authors
+* **Daniel Salazar**
+  - Hardware Analysis, Integration, and Soldering
+  - 3D Printing
+  - LCD Software
+  - Machine Learning model selection, analysis, and training/testing
+  
+* **Thomas Martin**
+  - Mic Software
+  - Audio Preprocess Software
+  - Button Software
+  - Conversion of Machine Learning model to the embedded version and
+  training/testing
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Hat tip to Adafruit for providing the hardware driver code
+* Thanks to [Rodger Doering](http://www.csueastbay.edu/directory/profiles/engr/doeringroger.html)
+for his insight into the intricacies of Digital Signal Processing.
+* Thanks to [Inés  Thiebaut](https://www.csueastbay.edu/directory/profiles/mus/thiebautines.html)
+for her insight into Musical Instrument Classification.
