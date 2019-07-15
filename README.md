@@ -30,7 +30,7 @@ printed case.
 
 <a name="bbb"></a>
 ### Beaglebone Black
-![](./images/BBB.jpg)
+![](./images/BBB_SoC.jpg)
 * The Beagle Bone Black (BBB) was utilized as this projects embedded platform.
 
 <a name="button"></a>
