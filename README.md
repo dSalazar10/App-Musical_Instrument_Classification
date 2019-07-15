@@ -12,6 +12,11 @@ printed case.
 
 ## Table of Contents
 * [Hardware](#hardware)
+  - [Beagelbonee Black](#bbb)
+  - [Button](#button)
+  - [Mic](#mic)
+  - [1602A LCD](#lcd)
+  - [3D Printed Parts](#case)
   - [Post Wiring](#finished)
 * [Software](#software)
 * [Built With](#built)
@@ -19,25 +24,45 @@ printed case.
 
 <a name="hardware"></a>
 ## Hardware
+
+![](./images/BOM.png)
+
+<a name="bbb"></a>
+### Beaglebone Black
+![](./images/BBB.jpg)
 * The Beagle Bone Black (BBB) was utilized as this projects embedded platform.
 
-![](./images/BBB.jpg)
-
-* A tactile button was integrated for user input.
-
+<a name="button"></a>
+### Tactile Button
 ![](./images/Button.jpg)
+* A tactile button was integrated for user input.
+* Pins used for Button:
+  - Button Data = P8[17]
+  - Button 3V = P9[3]
+  - Button GND = P9[1]
 
+<a name="mic"></a>
+### Microphone
+![](./images/Mic.jpg)
 * A microphone was integrated for audio input.
 
-![](./images/Mic.jpg)
-
-* A 1602A LCD screen was integrated for user output.
-
+<a name="lcd"></a>
+### LCD Screen
 ![](./images/LCD.png)
+* A 1602A LCD screen was integrated for user output.
+* Pins used for LCD:
+  - LCD Data = P8[12, 14, 16, 18]
+  - LCD 5V = P9[8]
+  - LCD GND = P9[2]
 
+<a name="case"></a>
+### 3D Printed Parts
 * A 3D Printed case was made to house the components
+  - ![](./images/Case.jpg)
+* A 3D Printed bridge was made to support the button
+  - ![](./images/Bridge.png)
 
-![](./images/Case.jpg)
+
 
 <a name="finished"></a>
 ### Post Wiring 
@@ -69,6 +94,8 @@ analysis, trimming, onset detection, and collecting the [Mel-frequency Cepstrum 
 * [NumPy](https://www.numpy.org) - this is used for manipulating the MFCC values
 * [Scikit Learn](https://scikit-learn.org/stable/modules/svm.html) - this is used for the Support Vector Machine 
 supervised learning model for classification of musical instruments
+* [1602A LCD Case](https://www.thingiverse.com/thing:1873666) - this was used to house the hardware
+* [Button Bridge](https://www.thingiverse.com/thing:1277483) - this was used to hol up the button inside the case
 
 <a name="authors"></a>
 ## Authors
