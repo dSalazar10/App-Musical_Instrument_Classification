@@ -13,7 +13,7 @@ printed case.
 
 ## Table of Contents
 * [Hardware](#hardware)
-  - [Beagelbonee Black](#bbb)
+  - [Beagelbone Black](#bbb)
   - [Button](#button)
   - [Mic](#mic)
   - [1602A LCD](#lcd)
